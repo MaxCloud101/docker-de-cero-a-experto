@@ -79,7 +79,7 @@ Si tambien quieres eliminar los volumenes, debes lanzar el siguiente comando
 docker system prune -a --volumes
 ```
 
-# Copiando data
+## Copiando data
 
 Para poder copiar data entre el host y los contenedores  usaremos el comando copy 
 
