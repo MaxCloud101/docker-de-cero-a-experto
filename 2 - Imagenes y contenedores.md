@@ -207,6 +207,19 @@ vamos a ver que el contenedor empieza a correr desatachado de la consola
 $ docker run --name mynginx -p 8081:80 -d nginx
 ```
 
+##### docker container attach
+
+Para volver atachar a un contenedor que arranco con el modo DETACHED (-d) lanzamos el comando 
+
+```sh
+$ docker attach stop [CONTAINER...]
+```
+El comando equivalente es el siguiente
+
+```sh
+$ docker attach [CONTAINER...]
+```
+
 ##### docker container stop (SIGTERM)
 
 Envia una señal al contenedor o contenedores para detener su ejecucion
