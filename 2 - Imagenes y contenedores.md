@@ -207,7 +207,7 @@ vamos a ver que el contenedor empieza a correr desatachado de la consola
 $ docker run --name mynginx -p 8081:80 -d nginx
 ```
 
-##### docker container stop
+##### docker container stop (SIGTERM)
 
 Envia una señal al contenedor o contenedores para detener su ejecucion
 
@@ -231,6 +231,32 @@ El comando equivalente es el siguiente
 
 ```sh
 $ docker restart [CONTAINER...]
+```
+
+##### docker container pause (SIGSTOP)
+
+Envia una señal al contenedor o contenedores para pausar su ejecucion
+
+```sh
+$ docker container pause [CONTAINER...]
+```
+El comando equivalente es el siguiente
+
+```sh
+$ docker pause [CONTAINER...]
+```
+
+##### docker container unpause
+
+Despues que se ha pausado un contenedor con el comando "pause" este se puede despausar
+
+```sh
+$ docker container unpause [CONTAINER...]
+```
+El comando equivalente es el siguiente
+
+```sh
+$ docker unpause [CONTAINER...]
 ```
 
 ##### docker container rm
