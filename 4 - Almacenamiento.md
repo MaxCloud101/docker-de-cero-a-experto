@@ -41,17 +41,28 @@ $ docker volume inspect
 Podemos montar un volumen mientras arrancamos un containers, si el volumen no se creo previamente este se crea, el formato usado sera "-v VOLUME_NAME:CONTAINER_PATH"
 
 ```sh
-docker run -v demo_volume:/app -p 8081:80 -d nginx
+docker run -v demo_volume:/app -p 8080:80 -d nginx
 ```
 
 Podemos montar el mismo volumen en varios contenedores al mismo tiempo
 
-#### Montamos con una carpeta del host en el contenedor
+# Trabajando con enlace
 
-También podemos montar un volumen del contenedor y enlazarlo con una carpeta en el host, el formato usado sera "-v HOST_PATH:CONTAINER_PATH"
+#### Montamos una carpeta del host en el contenedor
+
+También podemos enlazar una carpeta en el host con el contenedor, el formato usado sera "-v HOST_PATH:CONTAINER_PATH"
 
 ```sh
 docker run -v /home/ec2-user/environment/max:/app -p 8080:80 -d nginx
+```
+# Trabajando con tmpfs (Temporary file system)
+
+#### Montamos una carpeta en la memoria del host
+
+También podemos montar una carpeta del contenedor en la memoria del host
+
+```sh
+docker run --tmpfs /app -p 8080:80 -d nginx
 ```
 
 ## Eliminando todos los recursos creados
