@@ -220,6 +220,18 @@ El comando equivalente es el siguiente
 $ docker stop [CONTAINER...]
 ```
 
+##### docker container restart
+
+Despues que se ha detenido un contenedor con el comando "stop" este se puede reiniciar
+
+```sh
+$ docker container restart [CONTAINER...]
+```
+El comando equivalente es el siguiente
+
+```sh
+$ docker restart [CONTAINER...]
+```
 
 ##### docker container rm
 
