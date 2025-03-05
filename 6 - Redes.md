@@ -104,12 +104,18 @@ curl container1
 
 # Trabajando con redes host
 
-El driver permite enlazar un contenedor directamente con el host
+El driver host permite enlazar un contenedor directamente con el host
 
 Lanzamos un contenedor con el driver host
 
 ```sh
 docker run -d --name nginx --network host nginx:latest
+```
+
+Ingresamos al contenedor
+
+```sh
+docker exec -it nginx bash
 ```
 
 Ahora verificamos que el contenedor se enlace con el host, lanzamos el comando curl en el host
@@ -118,6 +124,25 @@ Ahora verificamos que el contenedor se enlace con el host, lanzamos el comando c
 curl localhost
 ```
 
+# Trabajando con redes none
 
+Con el driver none aislamos un contenedor
 
+Lanzamos un contenedor con el driver none
+
+```sh
+docker run -d --name nginx --network none nginx:latest
+```
+
+Ingresamos al contenedor
+
+```sh
+docker exec -it nginx bash
+```
+
+Verificamos que no podemos conectarnos a ninguna pagina externa 
+
+```sh
+curl www.google.com
+```
 
