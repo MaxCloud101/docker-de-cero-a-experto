@@ -79,7 +79,7 @@ docker exec -it container2 bash
 una vez dentro del contenedor usamos el comando curl para verificar la conexion con el primer contenedor
 
 ```sh
-curl container1
+curl container1:80
 ```
 
 verificamos que el comando falla, salimos del contenedor presionando ctrl + c
@@ -99,7 +99,7 @@ docker exec -it container2 bash
 lanzamos el comando curl y verificamos que podemos conectarnos al primer contenedor
 
 ```sh
-curl container1
+curl container1:80
 ```
 
 # Trabajando con redes host
@@ -121,7 +121,7 @@ docker exec -it nginx bash
 Ahora verificamos que el contenedor se enlace con el host, lanzamos el comando curl en el host
 
 ```sh
-curl localhost
+curl localhost:80
 ```
 
 # Trabajando con redes none
