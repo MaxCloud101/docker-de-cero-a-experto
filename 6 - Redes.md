@@ -41,3 +41,13 @@ Ejemplo:
 ```sh
 docker network rm my-network
 ```
+
+#### docker network inspect
+
+Para inspeccionar una red usamos el comando
+
+```sh
+docker network inspect [NAME]
+```
+
+
