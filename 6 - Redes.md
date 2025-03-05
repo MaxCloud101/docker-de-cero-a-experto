@@ -102,6 +102,21 @@ lanzamos el comando curl y verificamos que podemos conectarnos al primer contene
 curl container1
 ```
 
+# Trabajando con redes host
+
+El driver permite enlazar un contenedor directamente con el host
+
+Lanzamos un contenedor con el driver host
+
+```sh
+docker run -d --name nginx --network host nginx:latest
+```
+
+Ahora verificamos que el contenedor se enlace con el host, lanzamos el comando curl en el host
+
+```sh
+curl localhost
+```
 
 
 
