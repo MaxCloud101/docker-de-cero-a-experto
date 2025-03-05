@@ -73,7 +73,7 @@ También podemos montar una carpeta del contenedor en la memoria del host
 docker run --tmpfs /app -p 8080:80 -d nginx
 ```
 
-## Eliminando todos los recursos creados
+# Eliminando todos los recursos creados
 
 Si deseas eliminar rapidamente todos los recursos creados (containers, networks, images), utilizaras el siguiente comando
 
@@ -87,7 +87,7 @@ Si tambien quieres eliminar los volumenes, debes lanzar el siguiente comando
 docker system prune -a --volumes
 ```
 
-## Copiando data
+# Copiando data
 
 Para poder copiar data entre el host y los contenedores  usaremos el comando copy 
 
