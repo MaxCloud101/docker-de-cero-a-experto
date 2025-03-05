@@ -2,7 +2,7 @@
 
 Los volúmenes son el mecanismo para conservar los datos generados y utilizados por los contenedores Docker.
 
-## Comandos mas importantes
+## Volumenes nombrados
 
 #### docker volume create
 
@@ -35,9 +35,9 @@ Devuelve información sobre un volumen.
 $ docker volume inspect
 ```
 
-## Montando volumenes en contenedores
+## Montando volumenes nombrados en contenedores
 
-#### Montamos un volumen en el contenedor
+#### Montamos un volumen nombrado en el contenedor
 Podemos montar un volumen mientras arrancamos un containers, si el volumen no se creo previamente este se crea, el formato usado sera "-v VOLUME_NAME:CONTAINER_PATH"
 
 ```sh
@@ -45,6 +45,14 @@ docker run -v demo_volume:/app -p 8080:80 -d nginx
 ```
 
 Podemos montar el mismo volumen en varios contenedores al mismo tiempo
+
+## Volumenes anonimos
+
+Docker lo crea automáticamente cuando se inicia un contenedor con un punto de montaje pero sin un nombre de volumen específico.
+
+```sh
+docker run -v /app -p 8080:80 -d nginx
+```
 
 # Trabajando con enlace
 
