@@ -2,7 +2,7 @@
 
 Una imagen de Docker es una plantilla de solo lectura que define al contenedor. La imagen contiene el código que se ejecutará, incluida cualquier definición para cualquier biblioteca o dependencia que el código necesite.
 
-## 1 Principales comandos
+## Principales comandos
 
 Para poder trabajar con las imágenes utilizaremos el comando docker de la siguiente forma "docker image [comando]"
 
@@ -86,7 +86,7 @@ $ docker image rm [IMAGE...]
 
 Un contenedor de Docker es un contenedor ejecutable, independiente, ligero que integra todo lo necesario para ejecutar una aplicación, incluidas bibliotecas, herramientas del sistema, código y runtime.
 
-## 1 Principales comandos
+## Principales comandos
 
 #### Hello world en docker
 Vamos a ejecutar el clasico "hello world" en docker con el siguiente comando
