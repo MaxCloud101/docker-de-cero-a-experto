@@ -50,4 +50,59 @@ Para inspeccionar una red usamos el comando
 docker network inspect [NAME]
 ```
 
+# Trabajando con redes bridge
+
+Creamos una red con el driver bridge
+
+```sh
+docker network create demo-network -d bridge
+```
+
+Arrancamos un contenedor conectado a la nueva red
+
+```sh
+docker run --name container1 -d --network demo-network nginx
+```
+
+A continuacion arrancamos un segundo container con el siguiente comando
+
+```sh
+docker run --name container2 -d nginx
+```
+
+ingresamos al segundo contenedor con el siguiente comando
+
+```sh
+docker exec -it container2 bash
+```
+
+una vez dentro del contenedor usamos el comando curl para verificar la conexion con el primer contenedor
+
+```sh
+curl container1
+```
+
+verificamos que el comando falla, salimos del contenedor presionando ctrl + c
+
+a continuación conectamos el segundo contenedor a la red
+
+```sh
+docker network connect demo-network container2
+```
+
+volvemos a ingresar al contenedor
+
+```sh
+docker exec -it container2 bash
+```
+
+lanzamos el comando curl y verificamos que podemos conectarnos al primer contenedor
+
+```sh
+curl container1
+```
+
+
+
+
 
